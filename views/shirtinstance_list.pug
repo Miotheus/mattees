@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+  each val in shirtinstance_list
+    li 
+      a(href=val.url) #{val.shirt.name}
+      if val.status=='Available'
+        span.text-success #{val.status}
+      else
+        span.text-warning #{val.status} 
+      if val.status!='Available'
+        span  (Due: #{val.due_back} )
+
+  else
+    li There are no shirt copies in this store.

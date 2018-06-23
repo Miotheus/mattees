@@ -1,8 +1,16 @@
 var shirtInstance = require('../models/shirtinstance');
 
-// Display list of all shirtInstances.
-exports.shirtinstance_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: shirtInstance list');
+// Display list of all BookInstances.
+exports.shirtinstance_list = function(req, res, next) {
+
+  shirtInstance.find()
+    .populate('shirt')
+    .exec(function (err, list_shirtinstances) {
+      if (err) { return next(err); }
+      // Successful, so render
+      res.render('shirtinstance_list', { title: 'Shirt Instance List', shirtinstance_list: list_shirtinstances });
+    });
+    
 };
 
 // Display detail page for a specific shirtInstance.
