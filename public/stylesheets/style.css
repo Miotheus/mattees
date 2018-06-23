@@ -3,3 +3,18 @@
     padding: 0;
     list-style: none;
 }
+
+
+#headericon{
+
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+
+}
+
+#cabec{
+
+	background-color: black;
+}
