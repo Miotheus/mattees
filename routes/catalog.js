@@ -56,7 +56,7 @@ router.get('/client/:id/update', client_controller.client_update_get);
 router.post('/client/:id/update', client_controller.client_update_post);
 
 // GET request for one client.
-router.get('/client/:id', client_controller.client_detail);
+router.get('/profile/:id', client_controller.client_detail);
 
 // GET request for list of all clients.
 router.get('/clients', client_controller.client_list);

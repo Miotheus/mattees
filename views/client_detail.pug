@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 #{title} #{client.first_name}
+  
+  p #[strong Client:] #{client.first_name} #{client.family_name}
+  p #[strong Address:] #{client.address}
+  p #[strong Email:] #{client.email}
+  

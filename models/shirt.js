@@ -19,3 +19,8 @@ ShirtSchema
 
 //Export model
 module.exports = mongoose.model('Shirt', ShirtSchema);
+
+//Price is missing
+// Colour
+//
+//Fabric

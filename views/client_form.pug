@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1 #{title}
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='first_name') Name:
+      input#first_name.form-control(type='text', placeholder='John' name='first_name' value=(undefined===client ? '' : client.first_name) required='true')
+    div.form-group
+      label(for='family_name') Surname:
+      input#family_name.form-control(type='text', placeholder='Smith' name='family_name' value=(undefined===client ? '' : client.family_name) required='true')
+    div.form-group
+      label(for='address') Address:
+      input#address.form-control(type='text', placeholder='St. 123' name='address' value=(undefined===client ? '' : client.address) required='true')
+    div.form-group
+      label(for='creditcard') Credit-card:
+      input#creditcard.form-control(type='text', name='creditcard' value=(undefined===client ? '' : client.creditcard) required='true')
+    div.form-group
+      label(for='email') Email:
+      input#email.form-control(type='email', name='email' value=(undefined===client ? '' : client.email) required='true')
+    div.form-group
+      label(for='password') Password:
+      input#password.form-control(type='password', name='password' value=(undefined===client ? '' : client.password) required='true')
+    button.btn.btn-primary(type='submit') Register
+
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg

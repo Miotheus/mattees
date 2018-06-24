@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 #{title} #{shirt.name}
+  
+  p #[strong Shirt:] 
+    a(href=shirt.name.url) #{shirt.name}
+  p #[strong Season:] #{shirt.season}
+  p #[strong Brand:] #{shirt.brand}
+ 
+        
