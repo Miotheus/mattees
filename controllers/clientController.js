@@ -11,7 +11,7 @@ exports.client_list = function(req, res, next) {
     .exec(function (err, list_clients) {
       if (err) { return next(err); }
       //Successful, so render
-      res.render('client_list', { title: 'Client List', client_list: list_clients });
+      res.render('client_list', { title: 'Community', client_list: list_clients });
     });
 
 };
