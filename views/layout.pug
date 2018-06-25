@@ -8,31 +8,31 @@ html(lang='en')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
 
   body
 
-    block head
-      div#cabec(class="container")
-        div#cabec(class="jumbotron")
-            a(href='/catalog')
-              img#headericon(src="https://i.imgur.com/kwAyutA.png")
-
-    div#nav(class='navbar navbar-default')
+    div#cabec(class="container")
+        a(href='/catalog')
+          img#logo(height = "300" src="https://i.imgur.com/kwAyutA.png")
+    nav#naving(class='navbar navbar-default')
       div(class='container-fluid')
         div(class='navbar-header')
-          a(class='navbar-brand' href='/catalog') Mattees
+          a(class='navbar-brand' href='/catalog')
+
         ul(class='nav navbar-nav')
           li 
-            a(href='/catalog/shirts') Shirts
+            a(href='/catalog/shirts') Shirts 
+              i(span class='fa fa-tags')
           li 
-            a(href='/catalog/clients') Clients
+            a(href='/catalog/clients') People 
+              i(span class='fa fa-user-o')
           li 
-            a(href='/catalog/purchases') Purchases
-          li 
-            a(href='/catalog/shirtinstances') Availability
+            a(href='/catalog/shirtinstances') Availability 
+              i(span class='fa fa-check')
           li
-            a(href='/catalog/client/create') Register
-          hr
-                
-        div(class='col-sm-10')
-          block content
+            a(href='/catalog/client/create') Register 
+              i(span class='fa fa-plus')
+                  
+    div(class='col-sm-10')
+      block content
