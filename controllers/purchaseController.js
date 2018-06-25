@@ -1,4 +1,7 @@
-var purchase = require('../models/purchase');
+var Shirt = require('../models/shirt');
+var Client = require('../models/client');
+var Purchase = require('../models/purchase');
+var ShirtInstance = require('../models/shirtinstance');
 
 // Display list of all purchase.
 exports.purchase_list = function(req, res) {

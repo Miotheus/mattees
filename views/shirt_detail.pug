@@ -1,11 +1,8 @@
 extends layout
 
 block content
-  h1 #{title} #{shirt.name}
-  
-  p #[strong Shirt:] 
-    a(href=shirt.name.url) #{shirt.name}
-  p #[strong Season:] #{shirt.season}
-  p #[strong Brand:] #{shirt.brand}
-  form(method='POST' action='')
-  button.btn.btn-primary(type='submit') Buy
+	p hi there!
+	button(onclick="move()") Buy
+	script.
+		function move() {
+			window.location.href = '/catalog/purchase/create'}
