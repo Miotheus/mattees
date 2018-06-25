@@ -41,7 +41,7 @@ exports.client_detail = function(req, res, next) {
 
 // Display Client create form on GET.
 exports.client_create_get = function(req, res, next) {       
-    res.render('client_form', { title: 'Register – Welcome to Mattees!' });
+    res.render('client_form', { title: 'Sign up – Welcome to Mattees!' });
 };
 
 // Handle Client create on POST.

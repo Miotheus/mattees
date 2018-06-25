@@ -8,7 +8,7 @@ exports.shirtinstance_list = function(req, res, next) {
     .exec(function (err, list_shirtinstances) {
       if (err) { return next(err); }
       // Successful, so render
-      res.render('shirtinstance_list', { title: 'Availability', shirtinstance_list: list_shirtinstances });
+      res.render('shirtinstance_list', { title: 'Status', shirtinstance_list: list_shirtinstances });
     });
     
 };
