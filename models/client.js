@@ -9,7 +9,7 @@ var ClientSchema = new Schema(
     address: {type: String, required: true, max: 100},
     creditcard: {type: String, required: true, max: 100},
     email: {type: String, required: true, max: 100},
-    password: {type: Number, required: true},
+    password: {type: String, required: true},
   }
 );
 
