@@ -1,8 +1,10 @@
 extends layout
 
 block content
-	p hi there!
-	button(onclick="move()") Buy
+	h1 #{title} #{shirt.name}
+	p #[strong Season:] #{shirt.season}
+	p #[strong Brand:] #{shirt.brand}
+	button.btn.btn-primary(onclick="move()") Buy
 	script.
 		function move() {
 			window.location.href = '/catalog/purchase/create'}

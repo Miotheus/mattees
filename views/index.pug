@@ -2,14 +2,15 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #[em Mattees], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
+  p Welcome to #[em Mattees], a basic t-shirt e-commerce website project done by Matheus Schonarth.
 
   h1 Dynamic content
 
   if error
     p Error getting dynamic content.
   else
-    p The library has the following record counts:
+    p New content is automactilly added and updted – just like magic!
+    p The shop has the following records:
 
     ul
       li #[strong Shirts:] !{data.shirt_count}
