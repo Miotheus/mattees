@@ -1,10 +1,10 @@
-ar Shirt = require('../models/shirt');
-var shirtInstance = require('../models/shirtinstance');
+var Shirt = require('../models/shirt');
+var ShirtInstance = require('../models/shirtinstance');
 
 
 exports.shirtinstance_list = function(req, res, next) {
 
-  shirtInstance.find()
+  ShirtInstance.find()
     .populate('shirt')
     .exec(function (err, list_shirtinstances) {
       if (err) { return next(err); }
