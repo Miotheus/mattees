@@ -5,6 +5,7 @@ var ShirtInstance = require('../models/shirtinstance');
 
 var async = require('async');
 
+
 exports.index = function(req, res) {   
     
     async.parallel({

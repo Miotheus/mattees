@@ -9,12 +9,14 @@ block content
   if error
     p Error getting dynamic content.
   else
-    p New content is automactilly added and updted – just like magic!
+    p New content is automatically added and updated – #[em just like magic!]
+    img(src="https://images.unsplash.com/photo-1494281258937-45f28753affd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e8fc7fb96c5c5ed1dfd5534a7b8bb66e&auto=format&fit=crop&w=1350&q=80", height = 350)
+    hr
+
     p The shop has the following records:
 
     ul
       li #[strong Shirts:] !{data.shirt_count}
       li #[strong Copies:] !{data.shirt_instance_count}
-      li #[strong Copies available:] !{data.shirt_instance_available_count} 
       li #[strong Clients:] !{data.client_count}
       li #[strong Purchases:] !{data.purchase_count}

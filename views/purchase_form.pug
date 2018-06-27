@@ -1,7 +1,27 @@
 extends layout
 
 block content
-  h1 #{title}
+  h1= title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='shirt') Shirt:
+      select#shirt.form-control(type='select', placeholder='Select shirt' name='shirt' required='true' )
+        for shirt in shirts
+          option(value=shirt._id selected=(shirt._id.toString()==shirt.name ? 'selected' : false) ) #{shirt.name}
+    div.form-group
+      label(for='client') client:
+      select#client.form-control(type='select', placeholder='Select client' name='client' required='true' )
+        for client in clients
+          option(value=client._id selected=(client._id.toString()==client.client ? 'selected' : false) ) #{client.name}
+    div.form-group
+      label Size:
+      div
+        for genre in genres
+          div(style='display: inline; padding-right:10px;')
+            input.checkbox-input(type='checkbox', name='genre', id=genre._id, value=genre._id, checked=genre.checked )
+            label(for=genre._id) #{purchase.size}
+    button.btn.btn-primary(type='submit') Buy
 
   if errors 
     ul

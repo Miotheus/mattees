@@ -1,6 +1,6 @@
 var shirtInstance = require('../models/shirtinstance');
 
-// Display list of all BookInstances.
+
 exports.shirtinstance_list = function(req, res, next) {
 
   shirtInstance.find()

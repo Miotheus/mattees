@@ -1,13 +1,25 @@
 extends layout
 
 block content
-  h1= title
-  
-  ul
-  each shirt in shirt_list
-    li 
-      a(href=shirt.url) #{shirt.name} 
-      | (#{shirt.season})
-
-  else
-    li There are no shirts..
+    h1= title
+   
+    .layout 
+        section.inner
+            ul.grid
+                each shirt in shirt_list
+                    a(href=shirt.url)
+                        li.grid-tile
+                            .item
+                                .item-img(style=`background-image: url(${shirt.image}); background-size: auto auto; background-size: 150%; background-position: center 30%;`)
+                                .item-pnl
+                                    .pnl-wrapper
+                                        .pnl-description
+                                            span.pnl-label #{shirt.name}
+                                            span.pnl-price #{shirt.price} R$
+                                        .pnl-tocart
+                                            .pnl-ic-wrapper
+                                                span.pnl-ic
+                                                    svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewbox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve')
+                                                      g
+                                                        path(d='M25.4,29H6.6c-1.7,0-3-1.4-2.8-2.9l1.9-13.8C5.9,11,6.6,10,8,10h16c1.4,0,2.1,1,2.3,2.3l1.9,13.8 C28.4,27.6,27.1,29,25.4,29z')
+                                                        path(d='M10.6,12.7V8.4C10.6,5.4,13,3,16,3h0c3,0,5.4,2.4,5.4,5.4v4.3')

@@ -6,7 +6,6 @@ var PurchaseSchema = new Schema(
   {
     shirt: { type: Schema.ObjectId, ref: 'Shirt', required: true }, //reference to the associated shirt
     client: { type: Schema.ObjectId, ref: 'Client', required: true },
-    password: {type: Number, required: true},
     date: {type: Date, default: Date.now},
     size: {type: String, required: true, enum: ['P', 'M', 'G'], default: 'M'},
   }

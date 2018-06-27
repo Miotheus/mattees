@@ -86,7 +86,7 @@ exports.client_create_post =  [
 
             client.save(function (err) {
             if (err) { return next(err); }
-            // Genre saved. Redirect to genre detail page.
+            
             res.redirect(client.url);
                          });
 

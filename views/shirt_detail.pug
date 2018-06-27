@@ -1,10 +1,12 @@
 extends layout
 
 block content
-	h1 #{title} #{shirt.name}
+	h1 #{title} #{shirt.name} - #{shirt.price} R$
+	img#shirtdetail(src=shirt.image, height = 500)
 	p #[strong Season:] #{shirt.season}
 	p #[strong Brand:] #{shirt.brand}
-	button.btn.btn-primary(onclick="move()") Buy
+	p #[strong Fabric:] #{shirt.fabric}
+	button#button.btn.btn-primary(onclick="move()") Buy
 	script.
 		function move() {
 			window.location.href = '/catalog/purchase/create'}
