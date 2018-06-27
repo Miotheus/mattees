@@ -14,13 +14,6 @@ block content
       select#client.form-control(type='select', placeholder='Select client' name='client' required='true' )
         for client in clients
           option(value=client._id selected=(client._id.toString()==client.client ? 'selected' : false) ) #{client.name}
-    div.form-group
-      label Size:
-      div
-        for genre in genres
-          div(style='display: inline; padding-right:10px;')
-            input.checkbox-input(type='checkbox', name='genre', id=genre._id, value=genre._id, checked=genre.checked )
-            label(for=genre._id) #{purchase.size}
     button.btn.btn-primary(type='submit') Buy
 
   if errors 
