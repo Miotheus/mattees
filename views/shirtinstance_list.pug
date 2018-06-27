@@ -6,8 +6,7 @@ block content
   ul
   each shirtinstance in shirtinstance_list
     li 
-      #{shirtinstance.shirt}
-      #{shirtinstance.status}
+      #{shirtinstance.shirt} : #{shirtinstance.status}
 
   else
     li There are no shirt copies in this store.
