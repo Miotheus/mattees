@@ -1,3 +1,4 @@
+ar Shirt = require('../models/shirt');
 var shirtInstance = require('../models/shirtinstance');
 
 

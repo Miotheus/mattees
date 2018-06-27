@@ -4,10 +4,10 @@ block content
   h1= title
 
   ul
-  each val in shirtinstance_list
+  each shirt in shirtinstance_list
     li 
-      #{val.shirt.name}
-      #{val.status}
+      #{shirtinstance.shirt.name}
+      #{shirtinstance.status}
 
   else
     li There are no shirt copies in this store.
