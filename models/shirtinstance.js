@@ -4,8 +4,8 @@ var Schema = mongoose.Schema;
 
 var ShirtInstanceSchema = new Schema(
   {
-    shirt: { type: Schema.ObjectId, ref: 'Shirt',}, //reference to the associated shirt
-    status: {type: String, enum: ['Available', 'Out-of-stock'], default: 'Available'},
+    shirt: { type: Schema.ObjectId, ref: 'Shirt', required: true }, //reference to the associated shirt
+    status: {type: String, required: true, enum: ['Available', 'Out-of-stock'], default: 'Available'},
   }
 );
 
